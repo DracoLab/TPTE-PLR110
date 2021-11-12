@@ -50,4 +50,4 @@ TODO...
 - [1. Ερωτήσεις σε βασικές έννοιες](https://drive.google.com/file/d/1_PFHUEXPj7-j5e3KG8KL4HS2hctwIbM6/view?usp=sharing)
 - [2. Ερωτήσεις σε δομές επιλογής και επανάληψης](https://drive.google.com/file/d/1sA3jtsAUWqGHdszayqkg8VRzL-NIqgv4/view?usp=sharing)
 - [3. Ερωτήσεις για συναρτήσεις](https://drive.google.com/file/d/1FeVJ9DgdgRHWUUXolnYR0eQsfwwn4YiX/view?usp=sharing)
-- [4. Ερωτήσεις για κλάσεις γενικά και ειδικά για τη κλάση string]()
+- [4. Ερωτήσεις για κλάσεις γενικά και ειδικά για τη κλάση string](https://drive.google.com/file/d/177OfwEqfDCN_4I6MI6EKinVBAUNfl5IP/view?usp=sharing)
