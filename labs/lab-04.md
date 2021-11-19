@@ -574,22 +574,22 @@ bool kafetiera::elegxos(int k, int z, int n)
 
 void kafetiera::sketos(int ar=1)
 {
-    if (!elegxos(15*ar,0,100*ar))
-    {
+	if (!elegxos(15*ar,0,100*ar))
+	{
 		cout<<"**** den egine kanenas sketos kafes - den yparxoyn ta ylika ****"<<endl;
 		return;
-    }
-    nero=nero-100*ar;
-    kafes=kafes-15*ar;
-    cout<<"eftasan oi "<<ar<<" sketoi ....."<<endl;
+	}
+		nero=nero-100*ar;
+		kafes=kafes-15*ar;
+		cout<<"eftasan oi "<<ar<<" sketoi ....."<<endl;
 }
 
 void kafetiera::glykos(int ar=1)
 {
 	if (!elegxos(10*ar,20*ar,100*ar))
 	{
-	    cout<<"**** den egine kanenas glykos kafes - den yparxoyn ta ylika ****"<<endl;
-	    return;
+		cout<<"**** den egine kanenas glykos kafes - den yparxoyn ta ylika ****"<<endl;
+		return;
 	}
 	nero=nero-100*ar;
 	kafes=kafes-10*ar;
@@ -599,15 +599,15 @@ void kafetiera::glykos(int ar=1)
 
 void kafetiera::metrios(int ar=1)
 {
-    if (!elegxos(10*ar,10*ar,100*ar))
-    {
-        cout<<"**** den egine kanenas metrios kafes - den yparxoyn ta ylika ****"<<endl;
-        return;
-    }
-    nero=nero-100*ar;
-    kafes=kafes-10*ar;
-    zaxari=zaxari-10*ar;
-    cout<<"eftasan oi "<<ar<<" metrioi ....."<<endl;
+	if (!elegxos(10*ar,10*ar,100*ar))
+	{
+		cout<<"**** den egine kanenas metrios kafes - den yparxoyn ta ylika ****"<<endl;
+		return;
+	}
+	nero=nero-100*ar;
+	kafes=kafes-10*ar;
+	zaxari=zaxari-10*ar;
+	cout<<"eftasan oi "<<ar<<" metrioi ....."<<endl;
 }
 
 float kafetiera::kostos(){
@@ -618,29 +618,29 @@ float kafetiera::kostos(){
 
 int main()
 {
-    kafetiera kaf1,kaf2;
-    kaf1.marka="Philips";
-    kaf1.xroma="Roz";
-    kaf2.marka="Kenwood";
-    kaf2.xroma="Blue";
-    kaf1.gemisma();
-    kaf2.gemisma();
-    kaf1.katastasi();
-    kaf2.katastasi();
-    kaf1.metrios(2);
-    kaf2.sketos();
-    kaf2.glykos(3);
-    kaf1.katastasi();
-    kaf2.katastasi();
-    
-    //kaf1.kafes = kaf1.kafes + 50;
-    //kaf1.zaxari = kaf1.zaxari + 30;
-    //kaf1.katastasi();
-    
-    cout << "Kostos kaf1: " << kaf1.kostos() << " Euro." << endl;
-    cout << "Kostos kaf2: " << kaf2.kostos() << " Euro." << endl;
-    
-    return 0;
+	kafetiera kaf1,kaf2;
+	kaf1.marka="Philips";
+	kaf1.xroma="Roz";
+	kaf2.marka="Kenwood";
+	kaf2.xroma="Blue";
+	kaf1.gemisma();
+	kaf2.gemisma();
+	kaf1.katastasi();
+	kaf2.katastasi();
+	kaf1.metrios(2);
+	kaf2.sketos();
+	kaf2.glykos(3);
+	kaf1.katastasi();
+	kaf2.katastasi();
+
+	//kaf1.kafes = kaf1.kafes + 50;
+	//kaf1.zaxari = kaf1.zaxari + 30;
+	//kaf1.katastasi();
+
+	cout << "Kostos kaf1: " << kaf1.kostos() << " Euro." << endl;
+	cout << "Kostos kaf2: " << kaf2.kostos() << " Euro." << endl;
+
+	return 0;
 }
 ```
 
