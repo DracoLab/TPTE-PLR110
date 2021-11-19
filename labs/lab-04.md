@@ -348,7 +348,99 @@ int main()
 Μόλις το κάνετε προσπαθήστε να κάνετε ότι και πριν: Π.χ να προσθέστε 50 γραμμάρια καφέ στη καφετιέρα kaf1. Τι παρατηρείτε ?
 
 ```c++
+#include <iostream>
 
+using namespace std;
+class kafetiera
+{
+    private:
+        int kafes;
+        int zaxari;
+        int nero;
+    
+    public:
+        string marka;
+        string xroma;
+
+        void gemisma();
+        void katastasi();
+        void sketos(int ar);
+        void metrios(int ar);
+        void glykos(int ar);
+};
+
+void kafetiera::gemisma()
+{
+    nero=1000;
+    kafes=100;
+    zaxari=200;
+}
+
+void kafetiera::katastasi()
+{
+    cout << marka << " "<<xroma<<endl;
+    cout << "================"<<endl;
+    cout<<"Nero:"<<nero<<endl;
+    cout<<"Kafes:"<<kafes<<endl;
+    cout<<"Zaxari:"<<zaxari<<endl;
+    cout << "================"<<endl;
+}
+
+void kafetiera::sketos(int ar=1)
+{
+    nero=nero-100*ar;
+    kafes=kafes-15*ar;
+    if (ar>1)
+    cout<<"eftasan oi "<<ar<<" sketoi ....."<<endl;
+    else
+    cout<<"eftase o sketos ....."<<endl;
+}
+
+void kafetiera::glykos(int ar=1)
+{
+    nero=nero-100*ar;
+    kafes=kafes-10*ar;
+    zaxari=zaxari-20*ar;
+    if (ar>1)
+    cout<<"eftasan oi "<<ar<<" glykoi ....."<<endl;
+    else
+    cout<<"eftase o glykos ....."<<endl;
+}
+
+void kafetiera::metrios(int ar=1)
+{
+    nero=nero-100*ar;
+    kafes=kafes-10*ar;
+    zaxari=zaxari-10*ar;
+    if (ar>1)
+    cout<<"eftasan oi "<<ar<<" metrioi ....."<<endl;
+    else
+    cout<<"eftase o metrios ....."<<endl;
+}
+
+int main()
+{
+    kafetiera kaf1,kaf2;
+    kaf1.marka="Philips";
+    kaf1.xroma="Roz";
+    kaf2.marka="Kenwood";
+    kaf2.xroma="Blue";
+    kaf1.gemisma();
+    kaf2.gemisma();
+    kaf1.katastasi();
+    kaf2.katastasi();
+    kaf1.metrios(2);
+    kaf2.sketos();
+    kaf2.glykos(3);
+    kaf1.katastasi();
+    kaf2.katastasi();
+    
+    //kaf1.kafes = kaf1.kafes + 50;
+	//kaf1.zaxari = kaf1.zaxari + 30;
+	//kaf1.katastasi();
+
+    return 0;
+}
 ```
 
 ### Βήμα 6
