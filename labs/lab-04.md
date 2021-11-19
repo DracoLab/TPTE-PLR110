@@ -448,7 +448,109 @@ int main()
 Να φτιάξετε μια μέθοδο της κλάσης με όνομα **kostos()** η οποία να επιστρέφει ως τιμή το κόστος των υλικών (σε €) που έχουν **καταναλωθεί** μέχρι στιγμής σε μια καφετιέρα. Το νερό είναι δωρεάν, ο καφές στοιχίζει 5€ το κιλό και η ζάχαρη 2€ το κιλό. Στη συνάρτηση main() το πρόγραμμα να εμφανίζει το κόστος των υλικών για κάθε καφετιέρα
 
 ```c++
+#include <iostream>
 
+using namespace std;
+class kafetiera
+{
+    private:
+        int kafes;
+        int zaxari;
+        int nero;
+    
+    public:
+        string marka;
+        string xroma;
+
+        void gemisma();
+        void katastasi();
+        void sketos(int ar);
+        void metrios(int ar);
+        void glykos(int ar);
+        float kostos();
+};
+
+void kafetiera::gemisma()
+{
+    nero=1000;
+    kafes=100;
+    zaxari=200;
+}
+
+void kafetiera::katastasi()
+{
+    cout << marka << " "<<xroma<<endl;
+    cout << "================"<<endl;
+    cout<<"Nero:"<<nero<<endl;
+    cout<<"Kafes:"<<kafes<<endl;
+    cout<<"Zaxari:"<<zaxari<<endl;
+    cout << "================"<<endl;
+}
+
+void kafetiera::sketos(int ar=1)
+{
+    nero=nero-100*ar;
+    kafes=kafes-15*ar;
+    if (ar>1)
+    cout<<"eftasan oi "<<ar<<" sketoi ....."<<endl;
+    else
+    cout<<"eftase o sketos ....."<<endl;
+}
+
+void kafetiera::glykos(int ar=1)
+{
+    nero=nero-100*ar;
+    kafes=kafes-10*ar;
+    zaxari=zaxari-20*ar;
+    if (ar>1)
+    cout<<"eftasan oi "<<ar<<" glykoi ....."<<endl;
+    else
+    cout<<"eftase o glykos ....."<<endl;
+}
+
+void kafetiera::metrios(int ar=1)
+{
+    nero=nero-100*ar;
+    kafes=kafes-10*ar;
+    zaxari=zaxari-10*ar;
+    if (ar>1)
+    cout<<"eftasan oi "<<ar<<" metrioi ....."<<endl;
+    else
+    cout<<"eftase o metrios ....."<<endl;
+}
+
+float kafetiera::kostos(){
+	float kostos_zaxaris = (200-zaxari)/1000.0 * 2;
+	float kostos_kafe = (100-kafes)/1000.0 * 5;
+	return kostos_zaxaris + kostos_kafe;
+}
+
+int main()
+{
+    kafetiera kaf1,kaf2;
+    kaf1.marka="Philips";
+    kaf1.xroma="Roz";
+    kaf2.marka="Kenwood";
+    kaf2.xroma="Blue";
+    kaf1.gemisma();
+    kaf2.gemisma();
+    kaf1.katastasi();
+    kaf2.katastasi();
+    kaf1.metrios(2);
+    kaf2.sketos();
+    kaf2.glykos(3);
+    kaf1.katastasi();
+    kaf2.katastasi();
+    
+    //kaf1.kafes = kaf1.kafes + 50;
+	//kaf1.zaxari = kaf1.zaxari + 30;
+	//kaf1.katastasi();
+	
+	cout << "Kostos kaf1: " << kaf1.kostos() << " Euro." << endl;
+	cout << "Kostos kaf2: " << kaf2.kostos() << " Euro." << endl;
+
+    return 0;
+}
 ```
 
 ### Βήμα 7
