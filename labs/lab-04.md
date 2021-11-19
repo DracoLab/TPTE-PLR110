@@ -436,8 +436,8 @@ int main()
     kaf2.katastasi();
     
     //kaf1.kafes = kaf1.kafes + 50;
-	//kaf1.zaxari = kaf1.zaxari + 30;
-	//kaf1.katastasi();
+    //kaf1.zaxari = kaf1.zaxari + 30;
+    //kaf1.katastasi();
 
     return 0;
 }
