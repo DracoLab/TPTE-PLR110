@@ -485,9 +485,9 @@ void kafetiera::metrios(int ar=1)
 }
 
 float kafetiera::kostos(){
-	float kostos_zaxaris = (200-zaxari)/1000.0 * 2;
-	float kostos_kafe = (100-kafes)/1000.0 * 5;
-	return kostos_zaxaris + kostos_kafe;
+    float kostos_zaxaris = (200-zaxari)/1000.0 * 2;
+    float kostos_kafe = (100-kafes)/1000.0 * 5;
+    return kostos_zaxaris + kostos_kafe;
 }
 
 int main()
