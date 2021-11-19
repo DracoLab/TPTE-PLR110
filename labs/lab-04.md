@@ -143,6 +143,7 @@ int main()
     kaf2.gemisma();
     kaf1.katastasi();
     kaf2.katastasi();  
+    
     return 0;
 }
 ```
