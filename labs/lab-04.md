@@ -530,21 +530,21 @@ using namespace std;
 
 class kafetiera
 {
-private:
-    int kafes;
-    int zaxari;
-    int nero;
-    bool elegxos(int k, int z, int n);
-public:
-    string marka;
-    string xroma;
+    private:
+        int kafes;
+        int zaxari;
+        int nero;
+        bool elegxos(int k, int z, int n);
+    public:
+        string marka;
+        string xroma;
 
-    void gemisma();
-    void katastasi();
-    void sketos(int ar);
-    void glykos(int ar);
-    void metrios(int ar);
-    float kostos();
+        void gemisma();
+        void katastasi();
+        void sketos(int ar);
+        void glykos(int ar);
+        void metrios(int ar);
+        float kostos();
 };
 
 void kafetiera::gemisma()
@@ -566,81 +566,81 @@ void kafetiera::katastasi()
 
 bool kafetiera::elegxos(int k, int z, int n)
 {
-	if (k<=kafes && z<=zaxari && n<=nero)
-		return true;
-	else
-		return false;
+    if (k<=kafes && z<=zaxari && n<=nero)
+        return true;
+    else
+        return false;
 }
 
 void kafetiera::sketos(int ar=1)
 {
-	if (!elegxos(15*ar,0,100*ar))
-	{
-		cout<<"**** den egine kanenas sketos kafes - den yparxoyn ta ylika ****"<<endl;
-		return;
-	}
-		nero=nero-100*ar;
-		kafes=kafes-15*ar;
-		cout<<"eftasan oi "<<ar<<" sketoi ....."<<endl;
+    if (!elegxos(15*ar,0,100*ar))
+    {
+        cout<<"**** den egine kanenas sketos kafes - den yparxoyn ta ylika ****"<<endl;
+        return;
+    }
+    nero=nero-100*ar;
+    kafes=kafes-15*ar;
+    cout<<"eftasan oi "<<ar<<" sketoi ....."<<endl;
 }
 
 void kafetiera::glykos(int ar=1)
 {
-	if (!elegxos(10*ar,20*ar,100*ar))
-	{
-		cout<<"**** den egine kanenas glykos kafes - den yparxoyn ta ylika ****"<<endl;
-		return;
-	}
-	nero=nero-100*ar;
-	kafes=kafes-10*ar;
-	zaxari=zaxari-20*ar;
-	cout<<"eftasan oi "<<ar<<" glykoi ....."<<endl;
+    if (!elegxos(10*ar,20*ar,100*ar))
+    {
+        cout<<"**** den egine kanenas glykos kafes - den yparxoyn ta ylika ****"<<endl;
+        return;
+    }
+    nero=nero-100*ar;
+    kafes=kafes-10*ar;
+    zaxari=zaxari-20*ar;
+    cout<<"eftasan oi "<<ar<<" glykoi ....."<<endl;
 }
 
 void kafetiera::metrios(int ar=1)
 {
-	if (!elegxos(10*ar,10*ar,100*ar))
-	{
-		cout<<"**** den egine kanenas metrios kafes - den yparxoyn ta ylika ****"<<endl;
-		return;
-	}
-	nero=nero-100*ar;
-	kafes=kafes-10*ar;
-	zaxari=zaxari-10*ar;
-	cout<<"eftasan oi "<<ar<<" metrioi ....."<<endl;
+    if (!elegxos(10*ar,10*ar,100*ar))
+    {
+        cout<<"**** den egine kanenas metrios kafes - den yparxoyn ta ylika ****"<<endl;
+        return;
+    }
+    nero=nero-100*ar;
+    kafes=kafes-10*ar;
+    zaxari=zaxari-10*ar;
+    cout<<"eftasan oi "<<ar<<" metrioi ....."<<endl;
 }
 
 float kafetiera::kostos(){
-	float kostos_zaxaris = (200-zaxari)/1000.0 * 2;
-	float kostos_kafe = (100-kafes)/1000.0 * 5;
-	return kostos_zaxaris + kostos_kafe;
+    float kostos_zaxaris = (200-zaxari)/1000.0 * 2;
+    float kostos_kafe = (100-kafes)/1000.0 * 5;
+    return kostos_zaxaris + kostos_kafe;
 }
 
 int main()
 {
-	kafetiera kaf1,kaf2;
-	kaf1.marka="Philips";
-	kaf1.xroma="Roz";
-	kaf2.marka="Kenwood";
-	kaf2.xroma="Blue";
-	kaf1.gemisma();
-	kaf2.gemisma();
-	kaf1.katastasi();
-	kaf2.katastasi();
-	kaf1.metrios(2);
-	kaf2.sketos();
-	kaf2.glykos(3);
-	kaf1.katastasi();
-	kaf2.katastasi();
+    kafetiera kaf1,kaf2;
+    kaf1.marka="Philips";
+    kaf1.xroma="Roz";
+    kaf2.marka="Kenwood";
+    kaf2.xroma="Blue";
+    kaf1.gemisma();
+    kaf2.gemisma();
+    kaf1.katastasi();
+    kaf2.katastasi();
+    kaf1.metrios(2);
+    kaf2.sketos();
+    kaf2.glykos(3);
+    kaf1.katastasi();
+    kaf2.katastasi();
 
-	//kaf1.kafes = kaf1.kafes + 50;
-	//kaf1.zaxari = kaf1.zaxari + 30;
-	//kaf1.katastasi();
+    //kaf1.kafes = kaf1.kafes + 50;
+    //kaf1.zaxari = kaf1.zaxari + 30;
+    //kaf1.katastasi();
 
-	cout << "Kostos kaf1: " << kaf1.kostos() << " Euro." << endl;
-	cout << "Kostos kaf2: " << kaf2.kostos() << " Euro." << endl;
+    cout << "Kostos kaf1: " << kaf1.kostos() << " Euro." << endl;
+    cout << "Kostos kaf2: " << kaf2.kostos() << " Euro." << endl;
 
-	return 0;
+    return 0;
 }
 ```
 
