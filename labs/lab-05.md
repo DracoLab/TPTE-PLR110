@@ -543,7 +543,33 @@ int main()
 Θα παίξουµε τώρα 31 (ε σχεδόν τριανταµία) ! Υποθέτουµε ότι ο άσσος (Α) µετράει πάντα 1 πόντο. Υποθέτουµε επίσης ότι κάνουµε τη µάνα. Τραβήξτε τρία χαρτιά µαζεµένα. Αν το σύνολο των πόντων είναι µικρότερο ή ίσο µε 24 ξανατραβήξτε ένα-ένα χαρτί µέχρι να βγάλετε άθροισµα πόντων πάνω από 24. Αν βγάλατε πάνω από 31 εµφανίστε "kaika" αν βγάλατε 31 εµφανίστε "Kerdisa" διαφορετικά εµφανίστε "Exo xx pontous" όπου xx οι πόντοι που έχετε.
 
 ```c++
+#include <iostream>
+#include "trapoula.h"
 
+using namespace std;
+
+int main()
+{
+    trapoula pack1;
+    pack1.display();
+    pack1.suffle(10);
+    pack1.display();
+    pack1.suffle(5);
+
+    int pontoi = pack1.get_card(3);
+
+    while(pontoi <= 24)
+        pontoi += pack1.get_card(1);
+
+    if(pontoi > 31)
+        cout << "kaika" << endl;
+    else if(pontoi == 31)
+        cout << "kerdisa" << endl;
+    else
+        cout << "exw " << pontoi << " pontous" << endl;
+
+    return 0;
+}
 ```
 
 ### Βήμα 3
