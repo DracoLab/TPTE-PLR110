@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Efstratia Kazi";
+    cout << "Onomatepwnymo";
 
     return 0;
 }
