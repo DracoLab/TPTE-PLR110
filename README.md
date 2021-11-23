@@ -59,3 +59,8 @@ TODO...
 - [2. Ερωτήσεις σε δομές επιλογής και επανάληψης](https://drive.google.com/file/d/1sA3jtsAUWqGHdszayqkg8VRzL-NIqgv4/view?usp=sharing)
 - [3. Ερωτήσεις για συναρτήσεις](https://drive.google.com/file/d/1FeVJ9DgdgRHWUUXolnYR0eQsfwwn4YiX/view?usp=sharing)
 - [4. Ερωτήσεις για κλάσεις γενικά και ειδικά για τη κλάση string](https://drive.google.com/file/d/177OfwEqfDCN_4I6MI6EKinVBAUNfl5IP/view?usp=sharing)
+
+## Λεξικό
+
+- [Αντιστοίχιση ελληνικών και αγγλικών όρων](orologies.md)
+- [Οι Τελεστές στη C++](telestes.md)
