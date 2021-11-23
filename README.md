@@ -44,7 +44,9 @@ TODO...
 
 ## Εργασίες
 
-TODO...
+- [Δοκιμαστική εργασία](ergasies/dokimastiki.md)
+- [Εργασία 1](ergasies/ergasia-01.md)
+- [Εργασία 2](ergasies/ergasia-02.md)
 
 ## Κουίζ
 
