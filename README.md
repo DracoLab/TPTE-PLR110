@@ -45,11 +45,11 @@ TODO...
 ## Εργασίες
 
 - [Δοκιμαστική εργασία](ergasies/dokimastiki.md)
-  - [Λύση Δοκιμαστικής Εργασίας](ergasies/source/0_ct20044.cpp)
+  - [Λύση Δοκιμαστικής Εργασίας](ergasies/source/0_ctxxxxx.cpp)
 - [Εργασία 1](ergasies/ergasia-01.md)
-  - [Λύση Εργασίας 1](ergasies/source/1_ct20044.cpp)
+  - [Λύση Εργασίας 1](ergasies/source/1_ctxxxxx.cpp)
 - [Εργασία 2](ergasies/ergasia-02.md)
-  - [Λύση Εργασίας 2](ergasies/source/2_ct20044.cpp)
+  - [Λύση Εργασίας 2](ergasies/source/2_ctxxxxx.cpp)
 
 ## Κουίζ
 
