@@ -24,7 +24,12 @@
 
 ## Διαλέξεις
 
-TODO...
+- [1η Διάλεξη](lectures/lecture-01.md)
+- [2η Διάλεξη](lectures/lecture-02.md)
+- [3η Διάλεξη](lectures/lecture-03.md)
+- [4η Διάλεξη](lectures/lecture-04.md)
+- [5η Διάλεξη](lectures/lecture-05.md)
+- [6η Διάλεξη](lectures/lecture-06.md)
 
 ## Εργαστήρια
 
