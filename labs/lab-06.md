@@ -126,7 +126,7 @@ void kafetiera::metrios(int ar = 1)
 int main()
 {
 	kafetiera kaf1(2000, 300, 200), kaf2(1500, 250, 150);
-    return 0;
+	return 0;
 }
 ```
 
@@ -237,7 +237,7 @@ int main()
 	ptr -> xroma = "Black";
 	ptr -> katastasi();
 	
-    return 0;
+    	return 0;
 }
 ```
 
@@ -353,7 +353,7 @@ int main()
 	
 	aksia(kaf2);
 	
-    return 0;
+    	return 0;
 }
 
 void aksia(kafetiera kaf)
@@ -501,7 +501,7 @@ int main()
 	aksia(kaf2);
 	kaf2.aksia();
 	
-    return 0;
+    	return 0;
 }
 
 void aksia(kafetiera kaf)
