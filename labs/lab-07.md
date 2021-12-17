@@ -33,7 +33,82 @@
 Κατεβάστε το αρχείο **kodikas7.zip** και αντιγράψτε όλα τα αρχεία που περιέχει στο φάκελο "My documents". Το αρχείο **Lab7_1.cpp** περιέχει τη κλάση **koymbaras** την οποία πρέπει να τροποποιήσουµε. Ανοίξτε το µε το περιβάλλον του DEV C++. Μελετήστε τη κλάση **koymbaras**, και τις µεθόδους της. Ακόλουθα, στη συνάρτηση **main()**. ∆ηµιουργήστε δύο αντικείµενα κουµπαράδες **k1** & **k2**. Το όνοµα του κουµπαρά k1 να είναι "Goyroynaki" και του k2 "Metalikos". Κάντε καταθέσεις 100, 200 και 50€ στον k1, και 30 και 5€ στον k2. Κάντε αναλήψεις 80 και 30€ από τον k1 και µία ανάληψη 8€ από τον k2. Εµφανίστε τα στοιχεία και των δύο κουµπαράδων.
 
 ```c++
+#include <iostream>
+using namespace std;
 
+class koymbaras
+{
+    private:
+        float poso;
+        int kat;
+        int anal;
+    public:
+        string onoma;
+        koymbaras();
+        void analipsi(float p);
+        void katathesi(float p);
+        void display();
+};
+
+koymbaras::koymbaras()
+{
+    poso = 0;
+    kat = 0;
+    anal = 0;
+}
+
+void koymbaras::katathesi(float p)
+{
+     poso += p;
+     kat++;
+     cout << "Molis katathesate " << p << " euro ston " << onoma << endl;
+}
+
+void koymbaras::analipsi(float p)
+{
+     if (p > poso)
+     {
+        cout << "Sorry den yparxei toso poso gia analipsi" << endl;
+        return;
+     }
+     poso -= p;
+     anal++;
+     cout << "Molis kanate analipsi " << p << " euro apo ton " << onoma << endl;
+}
+
+void koymbaras::display()
+{
+     cout << endl << "Koymparas: " << onoma << endl;
+     cout << "==============================" << endl;
+     cout << "Ypoloipo poso: " << poso << endl;
+     cout << "Plithos katattheseon: " << kat << endl;
+     cout << "Plithos analipseon: " << anal << endl;
+     cout << "==============================" << endl;
+}
+
+
+int main()
+{
+    koymbaras k1, k2;
+
+    /* k1 */
+    k1.onoma = "Goyroynaki";
+    k1.katathesi(100);
+    k1.katathesi(200);
+    k1.katathesi(50);
+    k1.analipsi(80);
+    k1.analipsi(30);
+    k1.display();
+
+    /* k2 */
+    k2.onoma = "Metalikos";
+    k2.katathesi(30);
+    k2.katathesi(5);
+    k2.analipsi(8);
+    k2.display();
+
+    return 0;
+}
 ```
 
 ### Βήμα 2
