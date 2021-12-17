@@ -66,24 +66,24 @@ void koymbaras::katathesi(float p)
 
 void koymbaras::analipsi(float p)
 {
-     if (p > poso)
-     {
+    if (p > poso)
+    {
         cout << "Sorry den yparxei toso poso gia analipsi" << endl;
         return;
-     }
-     poso -= p;
-     anal++;
-     cout << "Molis kanate analipsi " << p << " euro apo ton " << onoma << endl;
+    }
+    poso -= p;
+    anal++;
+    cout << "Molis kanate analipsi " << p << " euro apo ton " << onoma << endl;
 }
 
 void koymbaras::display()
 {
-     cout << endl << "Koymparas: " << onoma << endl;
-     cout << "==============================" << endl;
-     cout << "Ypoloipo poso: " << poso << endl;
-     cout << "Plithos katattheseon: " << kat << endl;
-     cout << "Plithos analipseon: " << anal << endl;
-     cout << "==============================" << endl;
+    cout << endl << "Koymparas: " << onoma << endl;
+    cout << "==============================" << endl;
+    cout << "Ypoloipo poso: " << poso << endl;
+    cout << "Plithos katattheseon: " << kat << endl;
+    cout << "Plithos analipseon: " << anal << endl;
+    cout << "==============================" << endl;
 }
 
 
@@ -234,7 +234,122 @@ int main()
 Θα υπερφορτώσουµε τον τελεστή `+` για τη κλάση **koymbaras** ώστε όταν προσθέτουµε δύο αντικείµενα-κουµπαράδες να προκύπτει ένα νέο αντικείµενο κουµπαράς µε ποσό το άθροισµα των αντίστοιχων ποσών των δύο κουµπαράδων. Επίσης ο νέος κουµπαράς θα πρέπει να διαθέτει το άθροισµα του πλήθους αναλήψεων και καταθέσεων των δύο κουµπαράδων που προστίθενται. Το όνοµα του νέου κουµπαρά να είναι "Neos". Μόλις υπερφορτώσετε τον τελεστή `+`, δηµιουργήστε έναν νέο κουµπαρά **k5** στον οποίο να καταχωρήστε το άθροισµα των **k1** και **k2**. Εµφανίστε τα στοιχεία του **k5**.
 
 ```c++
+#include <iostream>
+using namespace std;
 
+class koymbaras
+{
+    private:
+        float poso;
+        int kat;
+        int anal;
+    public:
+        string onoma;
+        koymbaras();
+        koymbaras(float arxiko_poso);
+        koymbaras(float arxiko_poso, string name);
+        void analipsi(float p);
+        void katathesi(float p);
+        void display();
+        koymbaras operator+(koymbaras right);
+};
+
+koymbaras koymbaras::operator+(koymbaras right)
+{
+    koymbaras new_koymbaras;
+    new_koymbaras.poso = poso + right.poso;
+    new_koymbaras.anal = anal + right.anal;
+    new_koymbaras.kat = kat + right.kat;
+    new_koymbaras.onoma = "Neos";
+    return new_koymbaras;
+}
+
+koymbaras::koymbaras()
+{
+    poso = 0;
+    kat = 0;
+    anal = 0;
+}
+
+koymbaras::koymbaras(float arxiko_poso)
+{
+    poso = arxiko_poso;
+    kat = 0;
+    anal = 0;
+}
+
+koymbaras::koymbaras(float arxiko_poso, string name)
+{
+    poso = arxiko_poso;
+    onoma = name;
+    kat = 0;
+    anal = 0;
+}
+
+void koymbaras::katathesi(float p)
+{
+    poso += p;
+    kat++;
+    cout << "Molis katathesate " << p << " euro ston " << onoma << endl;
+}
+
+void koymbaras::analipsi(float p)
+{
+    if (p > poso)
+    {
+        cout << "Sorry den yparxei toso poso gia analipsi" << endl;
+        return;
+    }
+    poso -= p;
+    anal++;
+    cout << "Molis kanate analipsi " << p << " euro apo ton " << onoma << endl;
+}
+
+void koymbaras::display()
+{
+    cout << endl << "Koymparas: " << onoma << endl;
+    cout << "==============================" << endl;
+    cout << "Ypoloipo poso: " << poso << endl;
+    cout << "Plithos katattheseon: " << kat << endl;
+    cout << "Plithos analipseon: " << anal << endl;
+    cout << "==============================" << endl;
+}
+
+
+int main()
+{
+    koymbaras k1, k2;
+
+    /* k1 */
+    k1.onoma = "Goyroynaki";
+    k1.katathesi(100);
+    k1.katathesi(200);
+    k1.katathesi(50);
+    k1.analipsi(80);
+    k1.analipsi(30);
+    k1.display();
+
+    /* k2 */
+    k2.onoma = "Metalikos";
+    k2.katathesi(30);
+    k2.katathesi(5);
+    k2.analipsi(8);
+    k2.display();
+
+    /* k3 */
+    koymbaras k3(100);
+    k3.display();
+
+    /* k4 */
+    koymbaras k4(300, "Efstratia");
+    k4.display();
+
+    /* k5 */
+    koymbaras k5 = k1 + k2;
+    k5.display();
+
+    return 0;
+}
 ```
 
 ### Βήμα 4
