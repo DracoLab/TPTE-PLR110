@@ -722,5 +722,180 @@ int main()
 Θέλουµε για κάθε κουµπαρά να κρατάµε το ιστορικό καταθέσεων και αναλήψεων του. Πρέπει να τροποποιήστε τη κλάση ώστε αυτό να είναι δυνατόν. Μια νέα µέθοδος **history()** θα πρέπει να εµφανίζει το ιστορικό του κάθε κουµπαρά. Θεωρήστε ότι θα κρατάµε συνολικά το πολύ 20 καταθέσεις και αναλήψεις. Οι αναλήψεις να εµφανίζονται µε αρνητικό πρόσηµο. Στη main() εµφανίστε το ιστορικό των κουµπαράδων k1 και k2! Σκεφτείτε τι θα πρέπει να προσθέσετε στις µεταβλητές-µέλη καθώς και πως θα τροποποιήστε τις υπάρχουσες µεθόδους. Καλό κουράγιο! Τέλος εµφανίστε το ιστορικό του k5! Αν κάτι δεν πάει καλά σκεφτείτε τι πρέπει να κάνετε
 
 ```c++
+#include <iostream>
+using namespace std;
 
+class koymbaras
+{
+    private:
+        float poso;
+        int kat;
+        int anal;
+        int cntr;
+        float istoriko[20];
+    public:
+        string onoma;
+        koymbaras();
+        koymbaras(float arxiko_poso);
+        koymbaras(float arxiko_poso, string name);
+        void analipsi(float p);
+        void katathesi(float p);
+        void display();
+        void history();
+        koymbaras operator+(koymbaras right);
+        bool operator==(koymbaras right);
+        void operator<<(float right);
+        void operator>>(float right);
+};
+
+koymbaras koymbaras::operator+(koymbaras right)
+{
+    koymbaras new_koymbaras;
+    new_koymbaras.poso = poso + right.poso;
+    new_koymbaras.anal = anal + right.anal;
+    new_koymbaras.kat = kat + right.kat;
+    new_koymbaras.onoma = "Neos";
+    return new_koymbaras;
+}
+
+bool koymbaras::operator==(koymbaras right)
+{
+    if(poso == right.poso)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+void koymbaras::operator<<(float right)
+{
+    katathesi(right);
+}
+
+void koymbaras::operator>>(float right)
+{
+    analipsi(right);
+}
+
+koymbaras::koymbaras()
+{
+    poso = 0;
+    kat = 0;
+    anal = 0;
+    cntr = 0;
+}
+
+koymbaras::koymbaras(float arxiko_poso)
+{
+    poso = arxiko_poso;
+    kat = 0;
+    anal = 0;
+    cntr = 0;
+}
+
+koymbaras::koymbaras(float arxiko_poso, string name)
+{
+    poso = arxiko_poso;
+    onoma = name;
+    kat = 0;
+    anal = 0;
+    cntr = 0;
+}
+
+void koymbaras::katathesi(float p)
+{
+    poso += p;
+    kat++;
+    istoriko[cntr] = p;
+    cntr++;
+    cout << "Molis katathesate " << p << " euro ston " << onoma << endl;
+}
+
+void koymbaras::analipsi(float p)
+{
+    if (p > poso)
+    {
+        cout << "Sorry den yparxei toso poso gia analipsi" << endl;
+        return;
+    }
+    poso -= p;
+    anal++;
+    istoriko[cntr] = -p;
+    cntr++;
+    cout << "Molis kanate analipsi " << p << " euro apo ton " << onoma << endl;
+}
+
+void koymbaras::display()
+{
+    cout << endl << "Koymparas: " << onoma << endl;
+    cout << "==============================" << endl;
+    cout << "Ypoloipo poso: " << poso << endl;
+    cout << "Plithos katattheseon: " << kat << endl;
+    cout << "Plithos analipseon: " << anal << endl;
+    cout << "==============================" << endl;
+}
+
+void koymbaras::history()
+{
+    int i;
+    cout << "History: " << onoma << endl;
+    for(i = 0; i < cntr; i++)
+    {
+        cout << istoriko[i] << endl;
+    }
+}
+
+int main()
+{
+    koymbaras k1, k2;
+
+    /* k1 */
+    k1.onoma = "Goyroynaki";
+    k1.katathesi(100);
+    k1.katathesi(200);
+    k1.katathesi(50);
+    k1.analipsi(80);
+    k1.analipsi(30);
+    k1.display();
+
+    /* k2 */
+    k2.onoma = "Metalikos";
+    k2.katathesi(30);
+    k2.katathesi(5);
+    k2.analipsi(8);
+    k2.display();
+
+    /* k3 */
+    koymbaras k3(100);
+    k3.display();
+
+    /* k4 */
+    koymbaras k4(300, "Efstratia");
+    k4.display();
+
+    /* k5 */
+    koymbaras k5 = k1 + k2;
+    k5.display();
+
+    if(k3 == k4)
+    {
+        cout << "Oi koymbarades einai isoi." << endl;
+    }
+    else
+    {
+        cout << "Oi koymbarades den einai isoi." << endl;
+    }
+
+    k2 << 50;
+    k1 >> 10;
+
+    k1.history();
+    k2.history();
+    k5.history();
+
+    return 0;
+}
 ```
