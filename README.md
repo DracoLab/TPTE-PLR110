@@ -72,6 +72,7 @@
 - [3. Ερωτήσεις για συναρτήσεις](https://drive.google.com/file/d/1FeVJ9DgdgRHWUUXolnYR0eQsfwwn4YiX/view?usp=sharing)
 - [4. Ερωτήσεις για κλάσεις γενικά και ειδικά για τη κλάση string](https://drive.google.com/file/d/177OfwEqfDCN_4I6MI6EKinVBAUNfl5IP/view?usp=sharing)
 - [5. Κλάσεις - Μέθοδοι δόμησης/Αποδόμησης](https://drive.google.com/file/d/1P9s8KUNbtc89le5S6xgml6G5rvvi1b3d/view?usp=sharing)
+- [6. Ερωτήσεις μέχρι δείκτες και υπερφόρτωση τελεστών](https://drive.google.com/file/d/1_TUt2WojPWM3L0LfCAl1m34PhFzc9QWA/view?usp=sharing)
 
 ## Λεξικό
 
