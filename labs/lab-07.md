@@ -126,7 +126,107 @@ _Αυτή η έκδοση της µεθόδου δόµησης θα καταχω
 Μέσα στη συνάρτηση main(), δηµιουργήστε δύο νέους κουµπαράδες **k3** και **k4**. Στον πρώτο να καταχωριστεί αρχικό ποσό 100€, και στον δεύτερο ποσό 300€ και όνοµα το όνοµά σας. **Η δήλωση των αντικειµένων-κουµπαράδων να γίνει** µε τέτοιο τρόπο ώστε να καλούνται αντίστοιχα οι δύο παραπάνω εκδόσεις της υπερφορτωµένης µεθόδου δόµησης. Αµέσως µετά εµφανίστε τα στοιχεία των δύο κουµπαράδων. ∆ούλεψαν οι υπερφορτωµένες εκδόσεις της µεθόδου δόµησης?
 
 ```c++
+#include <iostream>
+using namespace std;
 
+class koymbaras
+{
+    private:
+        float poso;
+        int kat;
+        int anal;
+    public:
+        string onoma;
+        koymbaras();
+        koymbaras(float arxiko_poso);
+        koymbaras(float arxiko_poso, string name);
+        void analipsi(float p);
+        void katathesi(float p);
+        void display();
+};
+
+koymbaras::koymbaras()
+{
+    poso = 0;
+    kat = 0;
+    anal = 0;
+}
+
+koymbaras::koymbaras(float arxiko_poso)
+{
+    poso = arxiko_poso;
+    kat = 0;
+    anal = 0;
+}
+
+koymbaras::koymbaras(float arxiko_poso, string name)
+{
+    poso = arxiko_poso;
+    onoma = name;
+    kat = 0;
+    anal = 0;
+}
+
+void koymbaras::katathesi(float p)
+{
+    poso += p;
+    kat++;
+    cout << "Molis katathesate " << p << " euro ston " << onoma << endl;
+}
+
+void koymbaras::analipsi(float p)
+{
+    if (p > poso)
+    {
+        cout << "Sorry den yparxei toso poso gia analipsi" << endl;
+        return;
+    }
+    poso -= p;
+    anal++;
+    cout << "Molis kanate analipsi " << p << " euro apo ton " << onoma << endl;
+}
+
+void koymbaras::display()
+{
+     cout << endl << "Koymparas: " << onoma << endl;
+     cout << "==============================" << endl;
+     cout << "Ypoloipo poso: " << poso << endl;
+     cout << "Plithos katattheseon: " << kat << endl;
+     cout << "Plithos analipseon: " << anal << endl;
+     cout << "==============================" << endl;
+}
+
+
+int main()
+{
+    koymbaras k1, k2;
+
+    /* k1 */
+    k1.onoma = "Goyroynaki";
+    k1.katathesi(100);
+    k1.katathesi(200);
+    k1.katathesi(50);
+    k1.analipsi(80);
+    k1.analipsi(30);
+    k1.display();
+
+    /* k2 */
+    k2.onoma = "Metalikos";
+    k2.katathesi(30);
+    k2.katathesi(5);
+    k2.analipsi(8);
+    k2.display();
+
+    /* k3 */
+    koymbaras k3(100);
+    k3.display();
+
+    /* k4 */
+    koymbaras k4(300, "Efstratia");
+    k4.display();
+
+    return 0;
+}
 ```
 
 ### Βήμα 3
