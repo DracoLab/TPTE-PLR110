@@ -31,12 +31,12 @@
 - [5η Διάλεξη](lectures/lecture-05.md)
 - [6η Διάλεξη](lectures/lecture-06.md)
 - [7η Διάλεξη](lectures/lecture-07.md)
+- [Ενδιάμεση Διάλεξη Ανακεφαλαίωσης](lectures/lecture-EDA.md)
 - [8η Διάλεξη](lectures/lecture-08.md)
 - [9η Διάλεξη](lectures/lecture-09.md)
 - [10η Διάλεξη](lectures/lecture-10.md)
 - [11η Διάλεξη](lectures/lecture-11.md)
-- [Ενδιάμεση Διάλεξη Ανακεφαλαίωσης](lectures/lecture-12.md)
-- [Διάλεξη Ανακεφαλαίωσης](lectures/lecture-13.md)
+- [Διάλεξη Ανακεφαλαίωσης](lectures/lecture-DA.md)
 
 ## Εργαστήρια
 
@@ -52,7 +52,7 @@
 - [9o Εργαστήριο](labs/lab-09.md)
 - [10o Εργαστήριο](labs/lab-10.md)
 - [11o Εργαστήριο](labs/lab-11.md)
-- [Εργαστήριο ανακεφαλαίωσης](labs/lab-12.md)
+- [Εργαστήριο ανακεφαλαίωσης](labs/lab-EA.md)
 
 ## Εργασίες
 
