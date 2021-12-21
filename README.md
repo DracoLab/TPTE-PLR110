@@ -65,14 +65,14 @@
 
 ## Κουίζ
 
-- [1. Ερωτήσεις σε βασικές έννοιες 1](https://forms.gle/qHDWYgt6cp96YyGM9)
-- [1. Ερωτήσεις σε βασικές έννοιες 2](https://forms.gle/YBqBdpqRJL4H4ZXP9)
-- [1. Ερωτήσεις σε βασικές έννοιες 3](https://forms.gle/Wh3KypXgrcEyTvjq5)
-- [2. Ερωτήσεις σε δομές επιλογής και επανάληψης](https://drive.google.com/file/d/1sA3jtsAUWqGHdszayqkg8VRzL-NIqgv4/view?usp=sharing)
-- [3. Ερωτήσεις για συναρτήσεις](https://drive.google.com/file/d/1FeVJ9DgdgRHWUUXolnYR0eQsfwwn4YiX/view?usp=sharing)
-- [4. Ερωτήσεις για κλάσεις γενικά και ειδικά για τη κλάση string](https://drive.google.com/file/d/177OfwEqfDCN_4I6MI6EKinVBAUNfl5IP/view?usp=sharing)
-- [5. Κλάσεις - Μέθοδοι δόμησης/Αποδόμησης](https://drive.google.com/file/d/1P9s8KUNbtc89le5S6xgml6G5rvvi1b3d/view?usp=sharing)
-- [6. Ερωτήσεις μέχρι δείκτες και υπερφόρτωση τελεστών](https://drive.google.com/file/d/1_TUt2WojPWM3L0LfCAl1m34PhFzc9QWA/view?usp=sharing)
+- [01 Ερωτήσεις σε βασικές έννοιες 1](https://forms.gle/qHDWYgt6cp96YyGM9)
+- [01 Ερωτήσεις σε βασικές έννοιες 2](https://forms.gle/YBqBdpqRJL4H4ZXP9)
+- [01 Ερωτήσεις σε βασικές έννοιες 3](https://forms.gle/Wh3KypXgrcEyTvjq5)
+- [02 Ερωτήσεις σε δομές επιλογής και επανάληψης](https://drive.google.com/file/d/1sA3jtsAUWqGHdszayqkg8VRzL-NIqgv4/view?usp=sharing)
+- [03 Ερωτήσεις για συναρτήσεις](https://drive.google.com/file/d/1FeVJ9DgdgRHWUUXolnYR0eQsfwwn4YiX/view?usp=sharing)
+- [04 Ερωτήσεις για κλάσεις γενικά και ειδικά για τη κλάση string](https://drive.google.com/file/d/177OfwEqfDCN_4I6MI6EKinVBAUNfl5IP/view?usp=sharing)
+- [05 Κλάσεις - Μέθοδοι δόμησης/Αποδόμησης](https://drive.google.com/file/d/1P9s8KUNbtc89le5S6xgml6G5rvvi1b3d/view?usp=sharing)
+- [06 Ερωτήσεις μέχρι δείκτες και υπερφόρτωση τελεστών](https://drive.google.com/file/d/1_TUt2WojPWM3L0LfCAl1m34PhFzc9QWA/view?usp=sharing)
 
 ## Λεξικό
 
