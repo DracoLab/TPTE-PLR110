@@ -10,6 +10,7 @@
 |Αντικειμενοστρεφής προγραμματισμός|Object Oriented Programming (OOP)|
 |Αρχείο|File|
 |Ατέρμων βρόχος (επανάληψη που δεν σταματάει ποτέ)|Infinite loop|
+|Βασική κλάση|Basic class|
 |Βρόχος επανάληψης|Repeat loop / loop|
 |Δήλωση κλάσης|Class declaration|
 |Δήλωση συνάρτησης|Function declaration|
@@ -23,6 +24,8 @@
 |Καθολική μεταβλητή|Global variable|
 |Κενό αλφαριθμητικό " "|Empty string|
 |Κενός βρόχος|Empty loop|
+|Κληρονομικότητα|Inheritance|
+|Κληρονομικότητα πολλών επιπέδων|Multilevel inheritance|
 |Κλάση|Class|
 |Κλήση συνάρτησης|Function call|
 |Λογική παράσταση|Logical expression|
@@ -34,8 +37,10 @@
 |Μήκος (σε χαρακτήρες) αλφαριθμητικού|String length (or string size)|
 |Ορίσματα|Arguments|
 |Ορισμός συνάρτησης|Function definition|
+|Παράγωγη κλάση|Derived class|
 |Παράμετρος|Parameter|
 |Πίνακας χαρακτήρων|Character array|
+|Πολλαπλή κληρονομικότητα|Multiple inheritance|
 |Πρόσθια δήλωση|Forward declaration|
 |Προτάσεις βρόχου|Loop statements|
 |Ρεύμα|Stream|
@@ -47,5 +52,7 @@
 |Τύπος συνάρτησης|Function data type|
 |Τυχαία προσπέλαση|Random access|
 |Υπερφόρτωση|Overloading|
+|Υποσκέλιση μεθόδου|Method override|
+|Υπερφόρτωση τελεστή|Operator overloading|
 |Χαρακτήρας|Character|
 |Ψευδές|False|
