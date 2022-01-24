@@ -30,7 +30,12 @@ robot::robot()
 {
 	sfaires = 10;
 	apostasi = 0;
+	onoma = "NONAME";
+	varos = 0;
+	xroma = "NOCOLOR";
 	anoixto = false;
+
+	
 }
 
 void robot::gemisma(int s)
